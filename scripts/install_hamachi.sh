@@ -10,7 +10,9 @@ cd logmein-hamachi-*/;
 
 sudo ./install.sh;
 
+cd ..;
 
+rm -r logmein-hamachi-*;
 
 
 
