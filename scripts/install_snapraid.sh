@@ -29,5 +29,7 @@ make;
 # Install snapraid
 sudo make install;
 
-echo "[NG] Removing downloaded & extracted files"
+cd ..;
+
+echo "[NG] Removing downloaded & extracted files";
 rm -r snapraid-*;
