@@ -27,5 +27,7 @@ make;
 ## You will need to change back into the snapraid extracted folder for the next step
 
 # Install snapraid
-sudo make install
+sudo make install;
 
+echo "[NG] Removing downloaded & extracted files"
+rm -r snapraid-*;
