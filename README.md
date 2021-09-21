@@ -19,5 +19,5 @@ Follow the official documentation, starting at https://docs.syncthing.net/intro/
 - [] Write manual instructions for snapraid-runner
 - [] Write manual isntructions for cron job
 - [] Write manual instructions for adding hdds
-- [] Write manual instructions for syncthing
+- [x] Write manual instructions for syncthing
 - [] Write manual instructions for raspberry pi setup
