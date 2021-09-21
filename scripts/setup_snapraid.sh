@@ -11,9 +11,8 @@ echo "[NG] Cloning snapraid-runner to ~/git/";
 mkdir -p ~/git
 git clone https://github.com/Chronial/snapraid-runner.git ~/git/snapraid-runner
 
-echo "[NG] Copying snapraid-runner config - TODO"
-
-
-echo "[NG] Adding snapraid-runner to cron - TODO"
+echo "[NG] Copying snapraid-runner config"
+cp ~/git/snapraid-runner/snapraid-runner.conf.example ~/git/snapraid-runner/snapraid-runner.conf
 
 echo "[NG] Setting up snapraid done"
+echo "[NG] THERE ARE STILL MANUAL STEPS REQUIRED. READ THE README."
