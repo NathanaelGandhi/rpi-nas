@@ -15,7 +15,7 @@ Follow the official documentation, starting at https://docs.syncthing.net/intro/
 
 ## To-Do
 - [-] Create "master" setup script
-- [-] Copy snapraid-runner script
+- [x] Copy snapraid-runner script
 - [-] Write manual instructions for snapraid-runner
 - [-] Write manual isntructions for cron job
 - [-] Write manual instructions for adding hdds
