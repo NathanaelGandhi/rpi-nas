@@ -13,7 +13,7 @@ echo "[NG] 	SYNCTHING (File Synchronization)"
 
 
 while true; do
-    read -p "[NG] Do you wish to install all software? (choosing 'n' allows you to individually select)" yn
+    read -p "[NG] Do you wish to install all software? (select 'no' to individually select software)" yn
     case $yn in
         [Yy]* ) 
 		SNAPRAID=true; 
@@ -25,7 +25,7 @@ while true; do
         [Nn]* ) 
 		# Prompt SNAPRAID
 		while true; do
-		    read -p "Do you wish to install SNAPRAID?" yn
+		    read -p "[NG] Do you wish to install SNAPRAID?" yn
 		    case $yn in
 		        [Yy]* ) SNAPRAID=True; break;;
 		        [Nn]* ) SNAPRAID=false; break;;
@@ -35,7 +35,7 @@ while true; do
 
 		# Prompt MERGERFS
 		while true; do
-                    read -p "Do you wish to install MERGERFS?" yn
+                    read -p "[NG] Do you wish to install MERGERFS?" yn
                     case $yn in
                         [Yy]* ) MERGERFS=true; break;;
                         [Nn]* ) MERGERFS=false; break;;
@@ -45,7 +45,7 @@ while true; do
 
 		# Prompt TEMP
                 while true; do
-                    read -p "Do you wish to install MERGERFS?" yn
+                    read -p "[NG] Do you wish to install MERGERFS?" yn
                     case $yn in
                         [Yy]* ) TEMP=true; break;;
                         [Nn]* ) TEMP=false; break;;
@@ -55,7 +55,7 @@ while true; do
 
 		# Prompt HAMACHI
                 while true; do
-                    read -p "Do you wish to install HAMACHI?" yn
+                    read -p "[NG] Do you wish to install HAMACHI?" yn
                     case $yn in
                         [Yy]* ) HAMACHI=true; break;;
                         [Nn]* ) HAMACHI=false; break;;
@@ -65,7 +65,7 @@ while true; do
 
 		# prompt SYNCTHING
                 while true; do
-                    read -p "Do you wish to install SYNCTHING?" yn
+                    read -p "[NG] Do you wish to install SYNCTHING?" yn
                     case $yn in
                         [Yy]* ) SYNCTHING=true; break;;
                         [Nn]* ) SYNCTHING=false; break;;
