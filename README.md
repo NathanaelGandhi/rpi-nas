@@ -20,13 +20,13 @@ Run the install script and follow the prompts
 ./install.sh
 ```
 
-### Adding Harddrives
+### [Manual Input Required] Adding Harddrives
 
-### Config snapraid-runner
+### [Manual Input Required] Configure snapraid-runner
 
-### Enabling automatic operation (cron)
+### [Manual Input Required] Enabling automatic operation (cron)
 
-### Config syncthing
+### [Manual Input Required] Configure syncthing
 Follow the official documentation, starting at https://docs.syncthing.net/intro/getting-started.html 'Configuring'.
 
 ## To-Do
