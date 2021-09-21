@@ -2,7 +2,15 @@
 Raspberry Pi NAS - Setup instructions &amp; useful setup scrips
 
 ## Setup
+### Setting up Raspberry Pi
 
+### Adding Harddrives
+
+### Config snapraid-runner
+
+### Enabling automatic operation (cron)
+
+### Config syncthing
 
 
 ## To-Do
