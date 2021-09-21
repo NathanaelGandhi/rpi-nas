@@ -8,7 +8,7 @@ Raspberry Pi NAS - Setup instructions &amp; useful setup scrips
 Make a folder to hold your git clones
 
 ```
-https://github.com/NathanaelGandhi/rpi-nas.git
+mkdir -p ~/git
 ```
 
 Clone this repository
