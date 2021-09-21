@@ -11,7 +11,7 @@ Raspberry Pi NAS - Setup instructions &amp; useful setup scrips
 ### Enabling automatic operation (cron)
 
 ### Config syncthing
-
+Follow the official documentation, starting at https://docs.syncthing.net/intro/getting-started.html 'Configuring'.
 
 ## To-Do
 - [] Create "master" setup script
