@@ -4,6 +4,24 @@ Raspberry Pi NAS - Setup instructions &amp; useful setup scrips
 ## Setup
 ### Setting up Raspberry Pi
 
+### Setting up software
+Make a folder to hold your git clones
+'''
+https://github.com/NathanaelGandhi/rpi-nas.git
+'''
+
+Clone this repository
+```
+git clone https://github.com/NathanaelGandhi/rpi-nas.git ~/git/
+'''
+
+Run the install script
+'''
+./install.sh
+'''
+
+Follow the prompts.
+
 ### Adding Harddrives
 
 ### Config snapraid-runner
