@@ -109,7 +109,7 @@ fi
 
 if [ $SAMBA ]; then
 	if [ $SNAPRAID ]; then
-
+		;
 	else
 		echo "[NG] Creating harddrive mount points";
 		echo "[NG] Calling scripts/setup_directories.sh";
