@@ -58,7 +58,7 @@ while true; do
 
 		# Prompt TEMP
                 while true; do
-                    read -p "[NG] Do you wish to install MERGERFS? " yn
+                    read -p "[NG] Do you wish to add TEMPERATURE script? " yn
                     case $yn in
                         [Yy]* ) TEMP=1; break;;
                         [Nn]* ) TEMP=0; break;;
