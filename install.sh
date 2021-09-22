@@ -162,3 +162,6 @@ if [ $SYNCTHING ]; then
 	echo "[NG] Calling scripts/install_syncthing.sh";
 	sudo scripts/install_syncthing.sh
 fi
+
+echo "[NG] Everything you have selected has been installed, please follow the remaining manual steps found at https://github.com/NathanaelGandhi/rpi-nas"
+
