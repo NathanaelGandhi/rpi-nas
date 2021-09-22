@@ -79,8 +79,13 @@ while true; do
 done
 
 if [ $SNAPRAID ]; then
+	echo "[NG] Creating harddrive mount points";
+	echo "[NG] Calling scripts/setup_directories.sh";
+	sudo scripts/setup_directories.sh
 	echo "[NG] Calling scripts/install_snapraid.sh";
 	sudo scripts/install_snapraid.sh
+	echo "[NG] Calling scripts/setup_snapraid.sh";
+	sudo scripts/setup_snapraid.sh
 fi
 
 if [ $MERGERFS ]; then
