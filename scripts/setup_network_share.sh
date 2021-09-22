@@ -17,7 +17,8 @@ while true; do
         esac
 done
 
-if [ $ADDUSER ]; then
+if [ $ADDUSER ]
+then
 	sudo echo "public=no" >> /etc/samba/smb.conf;
 	read -p 'Adding Samba user: ' USERNAME;
 	sudo smbpasswd -a $USERNAME;
