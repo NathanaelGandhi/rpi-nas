@@ -91,7 +91,7 @@ while true; do
     esac
 done
 
-if [ $SNAPRAID ]; then
+if [ $SNAPRAID=='true' ]; then
 	echo "[NG] Creating harddrive mount points";
 	echo "[NG] Calling scripts/setup_directories.sh";
 	sudo scripts/setup_directories.sh
@@ -109,8 +109,8 @@ if [ $SNAPRAID ]; then
 	sudo scripts/setup_snapraid.sh
 fi
 
-if [ $SAMBA ]; then
-	if [ $SNAPRAID ]; then
+if [ $SAMBA=='true' ]; then
+	if [ $SNAPRAID=='true' ]; then
 		echo "[NG] directories & mount points already setup";
 	else
 		echo "[NG] Creating harddrive mount points";
@@ -131,7 +131,7 @@ if [ $SAMBA ]; then
 	sudo scripts/setup_network_share.sh
 fi
 
-if [ $MERGERFS ]; then
+if [ $MERGERFS=='true' ]; then
 	echo "[NG] Installing Mergerfs";
 	echo "[NG] Calling scripts/install_mergerfs.sh";
 	sudo scripts/install_mergerfs.sh
@@ -141,13 +141,13 @@ if [ $MERGERFS ]; then
 	sudo scripts/add_to_fstab_mergerfs.sh
 fi
 
-if [ $TEMP ]; then
+if [ $TEMP=='true' ]; then
 	echo "[NG] Adding temperature script to home folder";
 	echo "[NG] Calling enable_temp_polling.sh";
 	sudo scripts/install_enable_temp_polling.sh
 fi
 
-if [ $HAMACHI ]; then
+if [ $HAMACHI=='true' ]; then
 	echo "[NG] Installing LogMeIn Hamachi";
 	echo "[NG] Calling scripts/install_hamachi.sh";
 	sudo scripts/install_hamachi.sh
@@ -157,7 +157,7 @@ if [ $HAMACHI ]; then
 	sudo scripts/setup_hamachi.sh
 fi
 
-if [ $SYNCTHING ]; then
+if [ $SYNCTHING=='true' ]; then
 	echo "[NG] Installing Syncthing";
 	echo "[NG] Calling scripts/install_syncthing.sh";
 	sudo scripts/install_syncthing.sh
