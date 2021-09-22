@@ -11,14 +11,13 @@ sudo echo "directory mask=0777" >> /etc/samba/smb.conf;
 while true; do
 	read -p "[NG] Do you wish to require user login to access the share?" yn
         case $yn in
-        	[Yy]* ) ADDUSER=true; >> /etc/samba/smb.conf; break;;
-                [Nn]* ) ADDUSER=false; >> /etc/samba/smb.conf; break;;
+        	[Yy]* ) ADDUSER=1; >> /etc/samba/smb.conf; break;;
+                [Nn]* ) ADDUSER=1; >> /etc/samba/smb.conf; break;;
                 * ) echo "Please answer yes or no.";;
         esac
 done
 
-if [ $ADDUSER ]
-then
+if [ $ADDUSER -eq 1 ]; then
 	sudo echo "public=no" >> /etc/samba/smb.conf;
 	read -p 'Adding Samba user: ' USERNAME;
 	sudo smbpasswd -a $USERNAME;
