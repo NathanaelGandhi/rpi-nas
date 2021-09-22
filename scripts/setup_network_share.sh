@@ -12,7 +12,7 @@ while true; do
 	read -p "[NG] Do you wish to require user login to access the share?" yn
         case $yn in
         	[Yy]* ) ADDUSER=1; >> /etc/samba/smb.conf; break;;
-                [Nn]* ) ADDUSER=1; >> /etc/samba/smb.conf; break;;
+                [Nn]* ) ADDUSER=0; >> /etc/samba/smb.conf; break;;
                 * ) echo "Please answer yes or no.";;
         esac
 done
