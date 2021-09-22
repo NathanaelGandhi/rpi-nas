@@ -5,12 +5,12 @@
 #!/bin/bash
 
 echo "[NG] Software recommended to setup your Raspberry Pi NAS:"
-echo "[NG] 	SNAPRAID (Software raid/backup)"
-echo "[NG] 	SAMBA (network share)"
-echo "[NG] 	MERGERFS (Union File System)"
-echo "[NG] 	PI TEMPERATURE SCRIPT"
-echo "[NG] 	LOGMEIN HAMACHI (VPN)"
-echo "[NG] 	SYNCTHING (File Synchronization)"
+echo "[NG] 		SNAPRAID (Software raid/backup)"
+echo "[NG] 		SAMBA (network share)"
+echo "[NG] 		MERGERFS (Union File System)"
+echo "[NG] 		PI TEMPERATURE SCRIPT"
+echo "[NG] 		LOGMEIN HAMACHI (VPN)"
+echo "[NG] 		SYNCTHING (File Synchronization)"
 
 
 while true; do
@@ -108,7 +108,8 @@ if [ $SNAPRAID ]; then
 fi
 
 if [ $SAMBA ]; then
-	if [ $SNAPRAID ]; then;
+	if [ $SNAPRAID ]; then
+
 	else
 		echo "[NG] Creating harddrive mount points";
 		echo "[NG] Calling scripts/setup_directories.sh";
