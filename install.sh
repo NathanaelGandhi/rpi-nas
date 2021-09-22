@@ -19,19 +19,19 @@ while true; do
     read -p "[NG] Do you wish to install all software? (select 'no' to individually select software) " yn
     case $yn in
         [Yy]* ) 
-		SNAPRAID='true'; 
-		MERGERFS='true';
-		TEMP='true';
-		HAMACHI='true';
-		SYNCTHING='true';
+		SNAPRAID=1; 
+		MERGERFS=1;
+		TEMP=1;
+		HAMACHI=1;
+		SYNCTHING=1;
 		break;;
         [Nn]* ) 
 		# Prompt SNAPRAID
 		while true; do
 		    read -p "[NG] Do you wish to install SNAPRAID? " yn
 		    case $yn in
-		        [Yy]* ) SNAPRAID='true'; break;;
-		        [Nn]* ) SNAPRAID='false'; break;;
+		        [Yy]* ) SNAPRAID=1; break;;
+		        [Nn]* ) SNAPRAID=0; break;;
 		        * ) echo "Please answer yes or no.";;
 		    esac
 		done
@@ -40,8 +40,8 @@ while true; do
 		while true; do
 		    read -p "[NG] Do you wish to install SAMBA? " yn
 		    case $yn in
-		        [Yy]* ) SAMBA='true'; break;;
-		        [Nn]* ) SAMBA='false'; break;;
+		        [Yy]* ) SAMBA=1; break;;
+		        [Nn]* ) SAMBA=0; break;;
 		        * ) echo "Please answer yes or no.";;
 		    esac
 		done
@@ -50,8 +50,8 @@ while true; do
 		while true; do
                     read -p "[NG] Do you wish to install MERGERFS? " yn
                     case $yn in
-                        [Yy]* ) MERGERFS='true'; break;;
-                        [Nn]* ) MERGERFS='false'; break;;
+                        [Yy]* ) MERGERFS=1; break;;
+                        [Nn]* ) MERGERFS=0; break;;
                         * ) echo "Please answer yes or no.";;
                     esac
                 done
@@ -60,8 +60,8 @@ while true; do
                 while true; do
                     read -p "[NG] Do you wish to install MERGERFS? " yn
                     case $yn in
-                        [Yy]* ) TEMP='true'; break;;
-                        [Nn]* ) TEMP='false'; break;;
+                        [Yy]* ) TEMP=1; break;;
+                        [Nn]* ) TEMP=0; break;;
                         * ) echo "Please answer yes or no.";;
                     esac
                 done
@@ -70,8 +70,8 @@ while true; do
                 while true; do
                     read -p "[NG] Do you wish to install HAMACHI? " yn
                     case $yn in
-                        [Yy]* ) HAMACHI='true'; break;;
-                        [Nn]* ) HAMACHI='false'; break;;
+                        [Yy]* ) HAMACHI=1; break;;
+                        [Nn]* ) HAMACHI=0; break;;
                         * ) echo "Please answer yes or no.";;
                     esac
                 done
@@ -80,8 +80,8 @@ while true; do
                 while true; do
                     read -p "[NG] Do you wish to install SYNCTHING? " yn
                     case $yn in
-                        [Yy]* ) SYNCTHING='true'; break;;
-                        [Nn]* ) SYNCTHING='false'; break;;
+                        [Yy]* ) SYNCTHING=1; break;;
+                        [Nn]* ) SYNCTHING=0; break;;
                         * ) echo "Please answer yes or no.";;
                     esac
                 done
@@ -91,7 +91,7 @@ while true; do
     esac
 done
 
-if [ '$SNAPRAID'=='true' ]; then
+if [ $SNAPRAID -eq 1 ]; then
 	echo "[NG] Creating harddrive mount points";
 	echo "[NG] Calling scripts/setup_directories.sh";
 	sudo scripts/setup_directories.sh
@@ -109,8 +109,8 @@ if [ '$SNAPRAID'=='true' ]; then
 	sudo scripts/setup_snapraid.sh
 fi
 
-if [ '$SAMBA'=='true' ]; then
-	if [ '$SNAPRAID'=='true' ]; then
+if [ $SAMBA -eq 1 ]; then
+	if [ $SNAPRAID -eq 1 ]; then
 		echo "[NG] directories & mount points already setup";
 	else
 		echo "[NG] Creating harddrive mount points";
@@ -131,7 +131,7 @@ if [ '$SAMBA'=='true' ]; then
 	sudo scripts/setup_network_share.sh
 fi
 
-if [ '$MERGERFS'=='true' ]; then
+if [ $MERGERFS -eq 1 ]; then
 	echo "[NG] Installing Mergerfs";
 	echo "[NG] Calling scripts/install_mergerfs.sh";
 	sudo scripts/install_mergerfs.sh
@@ -141,13 +141,13 @@ if [ '$MERGERFS'=='true' ]; then
 	sudo scripts/add_to_fstab_mergerfs.sh
 fi
 
-if [ '$TEMP'=='true' ]; then
+if [ $TEMP -eq 1 ]; then
 	echo "[NG] Adding temperature script to home folder";
 	echo "[NG] Calling enable_temp_polling.sh";
 	sudo scripts/install_enable_temp_polling.sh
 fi
 
-if [ '$HAMACHI'=='true' ]; then
+if [ $HAMACHI -eq 1 ]; then
 	echo "[NG] Installing LogMeIn Hamachi";
 	echo "[NG] Calling scripts/install_hamachi.sh";
 	sudo scripts/install_hamachi.sh
@@ -157,11 +157,10 @@ if [ '$HAMACHI'=='true' ]; then
 	sudo scripts/setup_hamachi.sh
 fi
 
-if [ '$SYNCTHING'=='true' ]; then
+if [ $SYNCTHING -eq 1 ]; then
 	echo "[NG] Installing Syncthing";
 	echo "[NG] Calling scripts/install_syncthing.sh";
 	sudo scripts/install_syncthing.sh
 fi
 
 echo "[NG] Everything you have selected has been installed, please follow the remaining manual steps found at https://github.com/NathanaelGandhi/rpi-nas"
-
