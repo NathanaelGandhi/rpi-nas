@@ -14,7 +14,7 @@ echo "[NG] 		SYNCTHING (File Synchronization)"
 
 
 while true; do
-    read -p "[NG] Do you wish to install all software? (select 'no' to individually select software)" yn
+    read -p "[NG] Do you wish to install all software? (select 'no' to individually select software) " yn
     case $yn in
         [Yy]* ) 
 		SNAPRAID=true; 
