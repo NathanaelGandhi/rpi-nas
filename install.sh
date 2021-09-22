@@ -4,6 +4,8 @@
 
 #!/bin/bash
 
+cd ~/git/rpi-nas;
+
 echo "[NG] Software recommended to setup your Raspberry Pi NAS:"
 echo "[NG] 		SNAPRAID (Software raid/backup)"
 echo "[NG] 		SAMBA (network share)"
