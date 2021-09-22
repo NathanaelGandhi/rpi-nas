@@ -9,7 +9,7 @@ sudo echo "writeable=Yes" >> /etc/samba/smb.conf;
 sudo echo "create mask=0777" >> /etc/samba/smb.conf;
 sudo echo "directory mask=0777" >> /etc/samba/smb.conf;
 while true; do
-	read -p "[NG] Do you wish to require user login to access the share?" yn
+	read -p "[NG] Do you wish to require user login to access the share? " yn
         case $yn in
         	[Yy]* ) ADDUSER=1; >> /etc/samba/smb.conf; break;;
                 [Nn]* ) ADDUSER=0; >> /etc/samba/smb.conf; break;;
