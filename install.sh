@@ -19,69 +19,69 @@ while true; do
     read -p "[NG] Do you wish to install all software? (select 'no' to individually select software) " yn
     case $yn in
         [Yy]* ) 
-		SNAPRAID=true; 
-		MERGERFS=true;
-		TEMP=true;
-		HAMACHI=true;
-		SYNCTHING=true;
+		SNAPRAID=True; 
+		MERGERFS=True;
+		TEMP=True;
+		HAMACHI=True;
+		SYNCTHING=True;
 		break;;
         [Nn]* ) 
 		# Prompt SNAPRAID
 		while true; do
-		    read -p "[NG] Do you wish to install SNAPRAID?" yn
+		    read -p "[NG] Do you wish to install SNAPRAID? " yn
 		    case $yn in
 		        [Yy]* ) SNAPRAID=True; break;;
-		        [Nn]* ) SNAPRAID=false; break;;
+		        [Nn]* ) SNAPRAID=False; break;;
 		        * ) echo "Please answer yes or no.";;
 		    esac
 		done
 
 		# Prompt SAMBA
 		while true; do
-		    read -p "[NG] Do you wish to install SAMBA?" yn
+		    read -p "[NG] Do you wish to install SAMBA? " yn
 		    case $yn in
 		        [Yy]* ) SAMBA=True; break;;
-		        [Nn]* ) SAMBA=false; break;;
+		        [Nn]* ) SAMBA=False; break;;
 		        * ) echo "Please answer yes or no.";;
 		    esac
 		done
 
 		# Prompt MERGERFS
 		while true; do
-                    read -p "[NG] Do you wish to install MERGERFS?" yn
+                    read -p "[NG] Do you wish to install MERGERFS? " yn
                     case $yn in
                         [Yy]* ) MERGERFS=true; break;;
-                        [Nn]* ) MERGERFS=false; break;;
+                        [Nn]* ) MERGERFS=False; break;;
                         * ) echo "Please answer yes or no.";;
                     esac
                 done
 
 		# Prompt TEMP
                 while true; do
-                    read -p "[NG] Do you wish to install MERGERFS?" yn
+                    read -p "[NG] Do you wish to install MERGERFS? " yn
                     case $yn in
-                        [Yy]* ) TEMP=true; break;;
-                        [Nn]* ) TEMP=false; break;;
+                        [Yy]* ) TEMP=True; break;;
+                        [Nn]* ) TEMP=False; break;;
                         * ) echo "Please answer yes or no.";;
                     esac
                 done
 
 		# Prompt HAMACHI
                 while true; do
-                    read -p "[NG] Do you wish to install HAMACHI?" yn
+                    read -p "[NG] Do you wish to install HAMACHI? " yn
                     case $yn in
-                        [Yy]* ) HAMACHI=true; break;;
-                        [Nn]* ) HAMACHI=false; break;;
+                        [Yy]* ) HAMACHI=True; break;;
+                        [Nn]* ) HAMACHI=False; break;;
                         * ) echo "Please answer yes or no.";;
                     esac
                 done
 
 		# prompt SYNCTHING
                 while true; do
-                    read -p "[NG] Do you wish to install SYNCTHING?" yn
+                    read -p "[NG] Do you wish to install SYNCTHING? " yn
                     case $yn in
-                        [Yy]* ) SYNCTHING=true; break;;
-                        [Nn]* ) SYNCTHING=false; break;;
+                        [Yy]* ) SYNCTHING=True; break;;
+                        [Nn]* ) SYNCTHING=False; break;;
                         * ) echo "Please answer yes or no.";;
                     esac
                 done
