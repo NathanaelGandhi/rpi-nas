@@ -62,6 +62,41 @@ git clone https://github.com/NathanaelGandhi/rpi-nas.git ~/git/rpi-nas
 ```
 
 ### [Manual Input Required] Adding Harddrives
+1. List block devices with output info about filesystems (-f)
+```
+lsblk -f
+```
+
+2. Plug in a harddrive.
+If it is not formatted, now is a good time. (swap DEVICE below for the device path, eg. /dev/sdd)
+
+Format Parity Disks Using
+```
+mkfs.ext4 -m 0 -T largefile4 DEVICE
+```
+
+Format Data Disks Using
+```
+mkfs.xfs DEVICE
+```
+
+
+3. Rerun list block devices to find the UUID of the newly added harddrive
+```
+lsblk -f
+```
+
+4. Add your harddrive UUIDs to fstab (/etc/fstab) in the provided location (uncomment lines as required)
+```
+sudo nano /etc/fstab
+```
+
+5. Repeat steps 2-4 as required
+
+6. Reboot
+```
+sudo reboot
+```
 
 ### [Manual Input Required] Configure snapraid-runner
 
