@@ -1,5 +1,6 @@
 # rpi-nas
-Raspberry Pi NAS - Setup instructions &amp; useful setup scrips
+Raspberry Pi NAS - Setup instructions &amp; useful setup scrips.
+Recommended: Raspberry Pi 4B (1gb RAM per 16TB data)
 
 ## Setup
 ### Setting up Raspberry Pi
@@ -15,7 +16,7 @@ touch ssh
 3. Boot the Raspberry Pi
 Unmount the SD card and plug it into your Raspberry Pi. Connect your Raspberry Pi to your router. Plug it into power.
 
-4. Find the Pi IP address
+4. Find the IP address of your Raspberry Pi
 ```
 ping raspberrypi
 ```
@@ -40,21 +41,22 @@ Finish and reboot.
 8. ssh into your Raspberry Pi using your new password.
 
 ### Setting up software
-Install git
+1. Install git
 ```
 sudo apt update && sudo apt install git -y
+```
 
-Make a folder to hold your git clones
+2. Make a folder to hold your git clones
 ```
 mkdir -p ~/git/rpi-nas
 ```
 
-Clone this repository
+3. Clone this repository
 ```
 git clone https://github.com/NathanaelGandhi/rpi-nas.git ~/git/rpi-nas
 ```
 
-Run the install script and follow the prompts
+4. Run the install script and follow the prompts
 ```
 ./git/rpi-nas/install.sh
 ```
