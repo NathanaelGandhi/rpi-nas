@@ -67,15 +67,15 @@ git clone https://github.com/NathanaelGandhi/rpi-nas.git ~/git/rpi-nas
 lsblk -f
 ```
 
-2. Plug in a harddrive.
+2. Plug in a harddrive.<br/>
 If it is not formatted, now is a good time. (swap DEVICE below for the device path, eg. /dev/sdd)
 
-Format Parity Disks Using
+2a. Format Parity Disks Using
 ```
 mkfs.ext4 -m 0 -T largefile4 DEVICE
 ```
 
-Format Data Disks Using
+2b. Format Data Disks Using
 ```
 mkfs.xfs DEVICE
 ```
@@ -99,7 +99,7 @@ sudo reboot
 ```
 
 ### [Manual Input Required] Configure snapraid-runner
-Edit the snapraid-runner config file
+1. Edit the snapraid-runner config file
 ```
 sudo nano ~/etc/snapraid-runner.conf
 ```
@@ -107,16 +107,16 @@ Fill in your EMAIL and SMTP details to enable email feedback from runs.
 You can use gmail accounts as SMTP, however I'll leave that up to you to research / evaluate
 
 ### [Manual Input Required] Enabling automatic operation (cron)
-Open crontab by running
+1. Open crontab by running
 ```
 sudo crontab -e
 ```
 
-Add the following to run the snapraid-runner script every night at 3:00am
+2. Add the following to run the snapraid-runner script every night at 3:00am
 ```
 0 3 * * * python ~/git/snapraid-runner/snapraid-runner.py --conf ~/etc/snapraid-runner.conf
 ```
 checkout https://crontab.guru to learn how to pick different times
 
 ### [Manual Input Required] Configure syncthing
-Follow the official documentation, starting at https://docs.syncthing.net/intro/getting-started.html 'Configuring'.
+1. Follow the official documentation, starting at https://docs.syncthing.net/intro/getting-started.html 'Configuring'.
