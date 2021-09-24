@@ -4,11 +4,11 @@
 
 #!/bin/bash
 
-echo "[NG] Copying snapraid.conf to /etc/";
-sudo cp ../files/snapraid/snapraid.conf /etc/snapraid.conf;
+#echo "[NG] Copying snapraid.conf to /etc/";
+#sudo cp ../files/snapraid/snapraid.conf /etc/snapraid.conf;
 
 echo "[NG] Cloning snapraid-runner to ~/git/";
-mkdir -p ~/git
+mkdir -p ~/git/snapraid-runner
 git clone https://github.com/Chronial/snapraid-runner.git ~/git/snapraid-runner
 
 echo "[NG] Copying snapraid-runner config"
