@@ -47,17 +47,12 @@ Finish and reboot
 sudo apt update && sudo apt install git -y
 ```
 
-2. Make a folder to hold your git clones
+2. Make a folder to hold your git clones & clone this repository
 ```
-mkdir -p ~/git/rpi-nas
-```
-
-3. Clone this repository
-```
-git clone https://github.com/NathanaelGandhi/rpi-nas.git ~/git/rpi-nas
+mkdir -p ~/git/rpi-nas && git clone https://github.com/NathanaelGandhi/rpi-nas.git ~/git/rpi-nas
 ```
 
-4. Run the install script and follow the prompts
+3. Run the install script and follow the prompts
 ```
 ./git/rpi-nas/install.sh
 ```
