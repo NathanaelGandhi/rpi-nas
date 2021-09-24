@@ -99,6 +99,12 @@ sudo reboot
 ```
 
 ### [Manual Input Required] Configure snapraid-runner
+Edit the snapraid-runner config file
+```
+sudo nano ~/etc/snapraid-runner.conf
+```
+Fill in your EMAIL and SMTP details to enable email feedback from runs.
+You can use gmail accounts as SMTP, however I'll leave that up to you to research / evaluate
 
 ### [Manual Input Required] Enabling automatic operation (cron)
 Open crontab by running
@@ -108,7 +114,7 @@ sudo crontab -e
 
 Add the following to run the snapraid-runner script every night at 3:00am
 ```
-0 3 * * * python ~/git/snapraid-runner/snapraid-runner.py --conf ~/git/snapraid-runner/snapraid-runner.conf
+0 3 * * * python ~/git/snapraid-runner/snapraid-runner.py --conf ~/etc/snapraid-runner.conf
 ```
 checkout https://crontab.guru to learn how to pick different times
 
