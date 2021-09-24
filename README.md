@@ -61,7 +61,7 @@ git clone https://github.com/NathanaelGandhi/rpi-nas.git ~/git/rpi-nas
 ./git/rpi-nas/install.sh
 ```
 
-### [Manual Input Required] Adding Harddrives
+### Adding Harddrives [Manual Input Required]
 1. List block devices with output info about filesystems (-f)
 ```
 lsblk -f
@@ -98,7 +98,7 @@ sudo nano /etc/fstab
 sudo reboot
 ```
 
-### [Manual Input Required] Configure snapraid-runner
+### Configure snapraid-runner [Manual Input Required]
 1. Edit the snapraid-runner config file
 ```
 sudo nano ~/etc/snapraid-runner.conf
@@ -106,7 +106,7 @@ sudo nano ~/etc/snapraid-runner.conf
 Fill in your EMAIL and SMTP details to enable email feedback from runs.
 You can use gmail accounts as SMTP, however I'll leave that up to you to research / evaluate
 
-### [Manual Input Required] Enabling automatic operation (cron)
+### Enabling automatic operation (cron) [Manual Input Required]
 1. Open crontab by running
 ```
 sudo crontab -e
@@ -118,5 +118,5 @@ sudo crontab -e
 ```
 checkout https://crontab.guru to learn how to pick different times
 
-### [Manual Input Required] Configure syncthing
+### Configure syncthing [Manual Input Required]
 1. Follow the official documentation, starting at https://docs.syncthing.net/intro/getting-started.html 'Configuring'.
