@@ -144,7 +144,7 @@ fi
 if [ $TEMP -eq 1 ]; then
 	echo "[NG] Adding temperature script to home folder";
 	echo "[NG] Calling enable_temp_polling.sh";
-	sudo scripts/install_enable_temp_polling.sh
+	sudo scripts/enable_temp_polling.sh
 fi
 
 if [ $HAMACHI -eq 1 ]; then
