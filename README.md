@@ -13,7 +13,7 @@ Navigate to the boot directory on the SD card and create a blank file called 'ss
 touch ssh
 ```
 
-3. Boot the Raspberry Pi
+3. Boot the Raspberry Pi<br/>
 Unmount the SD card and plug it into your Raspberry Pi. Connect your Raspberry Pi to your router. Plug it into power.
 
 4. Find the IP address of your Raspberry Pi
@@ -35,10 +35,11 @@ Password: raspberry
 ```
 sudo raspi-config
 ```
-7. Select system options > Password. Change the password for the 'pi' user.
-Finish and reboot.
+7. Select system options > Password<br/>
+Change the password for the 'pi' user<br/>
+Finish and reboot
 
-8. ssh into your Raspberry Pi using your new password.
+8. ssh into your Raspberry Pi using your new password
 
 ### Setting up software
 1. Install git
@@ -68,7 +69,8 @@ lsblk -f
 ```
 
 2. Plug in a harddrive.<br/>
-If it is not formatted, now is a good time. (swap DEVICE below for the device path, eg. /dev/sdd)
+If it is not formatted, now is a good time<br/>
+Modify DEVICE below for the device path (eg. /dev/sdd)
 
 2a. Format Parity Disks Using
 ```
@@ -103,7 +105,7 @@ sudo reboot
 ```
 sudo nano ~/etc/snapraid-runner.conf
 ```
-Fill in your EMAIL and SMTP details to enable email feedback from runs.
+Fill in your EMAIL and SMTP details to enable email feedback from runs<br/>
 You can use gmail accounts as SMTP, however I'll leave that up to you to research / evaluate
 
 ### Enabling automatic operation (cron) [Manual Input Required]
