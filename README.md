@@ -95,15 +95,10 @@ sudo nano /etc/fstab
 
 5. Repeat steps 2-4 as required
 
-6. Reboot
-```
-sudo reboot
-```
-
 ### Configure snapraid-runner [Manual Input Required]
 1. Edit the snapraid-runner config file
 ```
-sudo nano ~/etc/snapraid-runner.conf
+sudo nano /etc/snapraid-runner.conf
 ```
 Fill in your EMAIL and SMTP details to enable email feedback from runs<br/>
 You can use gmail accounts as SMTP, however I'll leave that up to you to research / evaluate
@@ -116,9 +111,15 @@ sudo crontab -e
 
 2. Add the following to run the snapraid-runner script every night at 3:00am
 ```
-0 3 * * * python ~/git/snapraid-runner/snapraid-runner.py --conf ~/etc/snapraid-runner.conf
+0 3 * * * python ~/git/snapraid-runner/snapraid-runner.py --conf /etc/snapraid-runner.conf
 ```
 checkout https://crontab.guru to learn how to pick different times
 
 ### Configure syncthing [Manual Input Required]
 1. Follow the official documentation, starting at https://docs.syncthing.net/intro/getting-started.html 'Configuring'.
+
+### Final Step
+1. Reboot
+```
+sudo reboot
+```
